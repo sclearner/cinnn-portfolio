@@ -1,5 +1,5 @@
 import React from "react";
-import { MaterialButton } from "@v/components/button";
+import { AboutController } from "./controller/controller";
 
 export function AboutSubsection() {
   return (
@@ -13,6 +13,7 @@ export function AboutSubsection() {
         tác với các doanh nghiệp thuộc lĩnh vực này để tích lũy kinh nghiệm cho
         bản thân và đóng góp cho sự phát triển của doanh nghiệp.
       </p>
+      <AboutController />
     </div>
   );
 }

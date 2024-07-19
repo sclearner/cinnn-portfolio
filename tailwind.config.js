@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       primary: '#dfd7d3',
       'on-primary': '#000',
+      'primary-tonal': '#fff',
+      'on-primary-tonal': '#dfd7d3',
       secondary: '#292d2d',
       'on-secondary': '#dfd7d3',
       background: '#fff'
@@ -21,12 +23,13 @@ module.exports = {
       black: '900',
     },
     aspectRatio: {
-      square: "1 / 1"
+      square: "1 / 1",
+      video: "297 / 210"
     }
   },
   plugins: [],
   safelist: [{
-    pattern: /(bg|text|color)-.*/
+    pattern: /(bg|text|color|border)-.*/
   }]
 }
 
