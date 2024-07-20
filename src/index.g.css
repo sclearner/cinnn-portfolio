@@ -600,6 +600,10 @@ h3 {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-video {
+  aspect-ratio: 297 / 210;
+}
+
 .h-2 {
   height: 0.5rem;
 }
@@ -646,6 +650,10 @@ h3 {
 
 .max-w-\[600px\] {
   max-width: 600px;
+}
+
+.max-w-\[700px\] {
+  max-width: 700px;
 }
 
 .grow {
@@ -1232,8 +1240,16 @@ h3 {
   cursor: context-menu;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1242,10 +1258,6 @@ h3 {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-.flex-nowrap {
-  flex-wrap: nowrap;
 }
 
 .items-center {
@@ -1262,10 +1274,6 @@ h3 {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.justify-around {
-  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -1294,6 +1302,10 @@ h3 {
 
 .gap-6 {
   gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-\[45px\] {
@@ -1328,12 +1340,16 @@ h3 {
   text-wrap: pretty;
 }
 
-.rounded-full {
-  border-radius: 9999px;
-}
-
 .rounded-\[15px\] {
   border-radius: 15px;
+}
+
+.rounded-\[20px\] {
+  border-radius: 20px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .border-0 {
@@ -8406,16 +8422,636 @@ h3 {
   background-origin: content-box;
 }
 
+.fill-background {
+  fill: #fff;
+}
+
+.fill-background\/0 {
+  fill: rgb(255 255 255 / 0);
+}
+
+.fill-background\/10 {
+  fill: rgb(255 255 255 / 0.1);
+}
+
+.fill-background\/100 {
+  fill: rgb(255 255 255 / 1);
+}
+
+.fill-background\/15 {
+  fill: rgb(255 255 255 / 0.15);
+}
+
+.fill-background\/20 {
+  fill: rgb(255 255 255 / 0.2);
+}
+
+.fill-background\/25 {
+  fill: rgb(255 255 255 / 0.25);
+}
+
+.fill-background\/30 {
+  fill: rgb(255 255 255 / 0.3);
+}
+
+.fill-background\/35 {
+  fill: rgb(255 255 255 / 0.35);
+}
+
+.fill-background\/40 {
+  fill: rgb(255 255 255 / 0.4);
+}
+
+.fill-background\/45 {
+  fill: rgb(255 255 255 / 0.45);
+}
+
+.fill-background\/5 {
+  fill: rgb(255 255 255 / 0.05);
+}
+
+.fill-background\/50 {
+  fill: rgb(255 255 255 / 0.5);
+}
+
+.fill-background\/55 {
+  fill: rgb(255 255 255 / 0.55);
+}
+
+.fill-background\/60 {
+  fill: rgb(255 255 255 / 0.6);
+}
+
+.fill-background\/65 {
+  fill: rgb(255 255 255 / 0.65);
+}
+
+.fill-background\/70 {
+  fill: rgb(255 255 255 / 0.7);
+}
+
+.fill-background\/75 {
+  fill: rgb(255 255 255 / 0.75);
+}
+
+.fill-background\/80 {
+  fill: rgb(255 255 255 / 0.8);
+}
+
+.fill-background\/85 {
+  fill: rgb(255 255 255 / 0.85);
+}
+
+.fill-background\/90 {
+  fill: rgb(255 255 255 / 0.9);
+}
+
+.fill-background\/95 {
+  fill: rgb(255 255 255 / 0.95);
+}
+
+.fill-none {
+  fill: none;
+}
+
+.fill-on-primary {
+  fill: #000;
+}
+
+.fill-on-primary-tonal {
+  fill: #dfd7d3;
+}
+
+.fill-on-primary-tonal\/0 {
+  fill: rgb(223 215 211 / 0);
+}
+
+.fill-on-primary-tonal\/10 {
+  fill: rgb(223 215 211 / 0.1);
+}
+
+.fill-on-primary-tonal\/100 {
+  fill: rgb(223 215 211 / 1);
+}
+
+.fill-on-primary-tonal\/15 {
+  fill: rgb(223 215 211 / 0.15);
+}
+
+.fill-on-primary-tonal\/20 {
+  fill: rgb(223 215 211 / 0.2);
+}
+
+.fill-on-primary-tonal\/25 {
+  fill: rgb(223 215 211 / 0.25);
+}
+
+.fill-on-primary-tonal\/30 {
+  fill: rgb(223 215 211 / 0.3);
+}
+
+.fill-on-primary-tonal\/35 {
+  fill: rgb(223 215 211 / 0.35);
+}
+
+.fill-on-primary-tonal\/40 {
+  fill: rgb(223 215 211 / 0.4);
+}
+
+.fill-on-primary-tonal\/45 {
+  fill: rgb(223 215 211 / 0.45);
+}
+
+.fill-on-primary-tonal\/5 {
+  fill: rgb(223 215 211 / 0.05);
+}
+
+.fill-on-primary-tonal\/50 {
+  fill: rgb(223 215 211 / 0.5);
+}
+
+.fill-on-primary-tonal\/55 {
+  fill: rgb(223 215 211 / 0.55);
+}
+
+.fill-on-primary-tonal\/60 {
+  fill: rgb(223 215 211 / 0.6);
+}
+
+.fill-on-primary-tonal\/65 {
+  fill: rgb(223 215 211 / 0.65);
+}
+
+.fill-on-primary-tonal\/70 {
+  fill: rgb(223 215 211 / 0.7);
+}
+
+.fill-on-primary-tonal\/75 {
+  fill: rgb(223 215 211 / 0.75);
+}
+
+.fill-on-primary-tonal\/80 {
+  fill: rgb(223 215 211 / 0.8);
+}
+
+.fill-on-primary-tonal\/85 {
+  fill: rgb(223 215 211 / 0.85);
+}
+
+.fill-on-primary-tonal\/90 {
+  fill: rgb(223 215 211 / 0.9);
+}
+
+.fill-on-primary-tonal\/95 {
+  fill: rgb(223 215 211 / 0.95);
+}
+
+.fill-on-primary\/0 {
+  fill: rgb(0 0 0 / 0);
+}
+
+.fill-on-primary\/10 {
+  fill: rgb(0 0 0 / 0.1);
+}
+
+.fill-on-primary\/100 {
+  fill: rgb(0 0 0 / 1);
+}
+
+.fill-on-primary\/15 {
+  fill: rgb(0 0 0 / 0.15);
+}
+
+.fill-on-primary\/20 {
+  fill: rgb(0 0 0 / 0.2);
+}
+
+.fill-on-primary\/25 {
+  fill: rgb(0 0 0 / 0.25);
+}
+
+.fill-on-primary\/30 {
+  fill: rgb(0 0 0 / 0.3);
+}
+
+.fill-on-primary\/35 {
+  fill: rgb(0 0 0 / 0.35);
+}
+
+.fill-on-primary\/40 {
+  fill: rgb(0 0 0 / 0.4);
+}
+
+.fill-on-primary\/45 {
+  fill: rgb(0 0 0 / 0.45);
+}
+
+.fill-on-primary\/5 {
+  fill: rgb(0 0 0 / 0.05);
+}
+
+.fill-on-primary\/50 {
+  fill: rgb(0 0 0 / 0.5);
+}
+
+.fill-on-primary\/55 {
+  fill: rgb(0 0 0 / 0.55);
+}
+
+.fill-on-primary\/60 {
+  fill: rgb(0 0 0 / 0.6);
+}
+
+.fill-on-primary\/65 {
+  fill: rgb(0 0 0 / 0.65);
+}
+
+.fill-on-primary\/70 {
+  fill: rgb(0 0 0 / 0.7);
+}
+
+.fill-on-primary\/75 {
+  fill: rgb(0 0 0 / 0.75);
+}
+
+.fill-on-primary\/80 {
+  fill: rgb(0 0 0 / 0.8);
+}
+
+.fill-on-primary\/85 {
+  fill: rgb(0 0 0 / 0.85);
+}
+
+.fill-on-primary\/90 {
+  fill: rgb(0 0 0 / 0.9);
+}
+
+.fill-on-primary\/95 {
+  fill: rgb(0 0 0 / 0.95);
+}
+
+.fill-on-secondary {
+  fill: #dfd7d3;
+}
+
+.fill-on-secondary\/0 {
+  fill: rgb(223 215 211 / 0);
+}
+
+.fill-on-secondary\/10 {
+  fill: rgb(223 215 211 / 0.1);
+}
+
+.fill-on-secondary\/100 {
+  fill: rgb(223 215 211 / 1);
+}
+
+.fill-on-secondary\/15 {
+  fill: rgb(223 215 211 / 0.15);
+}
+
+.fill-on-secondary\/20 {
+  fill: rgb(223 215 211 / 0.2);
+}
+
+.fill-on-secondary\/25 {
+  fill: rgb(223 215 211 / 0.25);
+}
+
+.fill-on-secondary\/30 {
+  fill: rgb(223 215 211 / 0.3);
+}
+
+.fill-on-secondary\/35 {
+  fill: rgb(223 215 211 / 0.35);
+}
+
+.fill-on-secondary\/40 {
+  fill: rgb(223 215 211 / 0.4);
+}
+
+.fill-on-secondary\/45 {
+  fill: rgb(223 215 211 / 0.45);
+}
+
+.fill-on-secondary\/5 {
+  fill: rgb(223 215 211 / 0.05);
+}
+
+.fill-on-secondary\/50 {
+  fill: rgb(223 215 211 / 0.5);
+}
+
+.fill-on-secondary\/55 {
+  fill: rgb(223 215 211 / 0.55);
+}
+
+.fill-on-secondary\/60 {
+  fill: rgb(223 215 211 / 0.6);
+}
+
+.fill-on-secondary\/65 {
+  fill: rgb(223 215 211 / 0.65);
+}
+
+.fill-on-secondary\/70 {
+  fill: rgb(223 215 211 / 0.7);
+}
+
+.fill-on-secondary\/75 {
+  fill: rgb(223 215 211 / 0.75);
+}
+
+.fill-on-secondary\/80 {
+  fill: rgb(223 215 211 / 0.8);
+}
+
+.fill-on-secondary\/85 {
+  fill: rgb(223 215 211 / 0.85);
+}
+
+.fill-on-secondary\/90 {
+  fill: rgb(223 215 211 / 0.9);
+}
+
+.fill-on-secondary\/95 {
+  fill: rgb(223 215 211 / 0.95);
+}
+
+.fill-primary {
+  fill: #dfd7d3;
+}
+
+.fill-primary-tonal {
+  fill: #fff;
+}
+
+.fill-primary-tonal\/0 {
+  fill: rgb(255 255 255 / 0);
+}
+
+.fill-primary-tonal\/10 {
+  fill: rgb(255 255 255 / 0.1);
+}
+
+.fill-primary-tonal\/100 {
+  fill: rgb(255 255 255 / 1);
+}
+
+.fill-primary-tonal\/15 {
+  fill: rgb(255 255 255 / 0.15);
+}
+
+.fill-primary-tonal\/20 {
+  fill: rgb(255 255 255 / 0.2);
+}
+
+.fill-primary-tonal\/25 {
+  fill: rgb(255 255 255 / 0.25);
+}
+
+.fill-primary-tonal\/30 {
+  fill: rgb(255 255 255 / 0.3);
+}
+
+.fill-primary-tonal\/35 {
+  fill: rgb(255 255 255 / 0.35);
+}
+
+.fill-primary-tonal\/40 {
+  fill: rgb(255 255 255 / 0.4);
+}
+
+.fill-primary-tonal\/45 {
+  fill: rgb(255 255 255 / 0.45);
+}
+
+.fill-primary-tonal\/5 {
+  fill: rgb(255 255 255 / 0.05);
+}
+
+.fill-primary-tonal\/50 {
+  fill: rgb(255 255 255 / 0.5);
+}
+
+.fill-primary-tonal\/55 {
+  fill: rgb(255 255 255 / 0.55);
+}
+
+.fill-primary-tonal\/60 {
+  fill: rgb(255 255 255 / 0.6);
+}
+
+.fill-primary-tonal\/65 {
+  fill: rgb(255 255 255 / 0.65);
+}
+
+.fill-primary-tonal\/70 {
+  fill: rgb(255 255 255 / 0.7);
+}
+
+.fill-primary-tonal\/75 {
+  fill: rgb(255 255 255 / 0.75);
+}
+
+.fill-primary-tonal\/80 {
+  fill: rgb(255 255 255 / 0.8);
+}
+
+.fill-primary-tonal\/85 {
+  fill: rgb(255 255 255 / 0.85);
+}
+
+.fill-primary-tonal\/90 {
+  fill: rgb(255 255 255 / 0.9);
+}
+
+.fill-primary-tonal\/95 {
+  fill: rgb(255 255 255 / 0.95);
+}
+
+.fill-primary\/0 {
+  fill: rgb(223 215 211 / 0);
+}
+
+.fill-primary\/10 {
+  fill: rgb(223 215 211 / 0.1);
+}
+
+.fill-primary\/100 {
+  fill: rgb(223 215 211 / 1);
+}
+
+.fill-primary\/15 {
+  fill: rgb(223 215 211 / 0.15);
+}
+
+.fill-primary\/20 {
+  fill: rgb(223 215 211 / 0.2);
+}
+
+.fill-primary\/25 {
+  fill: rgb(223 215 211 / 0.25);
+}
+
+.fill-primary\/30 {
+  fill: rgb(223 215 211 / 0.3);
+}
+
+.fill-primary\/35 {
+  fill: rgb(223 215 211 / 0.35);
+}
+
+.fill-primary\/40 {
+  fill: rgb(223 215 211 / 0.4);
+}
+
+.fill-primary\/45 {
+  fill: rgb(223 215 211 / 0.45);
+}
+
+.fill-primary\/5 {
+  fill: rgb(223 215 211 / 0.05);
+}
+
+.fill-primary\/50 {
+  fill: rgb(223 215 211 / 0.5);
+}
+
+.fill-primary\/55 {
+  fill: rgb(223 215 211 / 0.55);
+}
+
+.fill-primary\/60 {
+  fill: rgb(223 215 211 / 0.6);
+}
+
+.fill-primary\/65 {
+  fill: rgb(223 215 211 / 0.65);
+}
+
+.fill-primary\/70 {
+  fill: rgb(223 215 211 / 0.7);
+}
+
+.fill-primary\/75 {
+  fill: rgb(223 215 211 / 0.75);
+}
+
+.fill-primary\/80 {
+  fill: rgb(223 215 211 / 0.8);
+}
+
+.fill-primary\/85 {
+  fill: rgb(223 215 211 / 0.85);
+}
+
+.fill-primary\/90 {
+  fill: rgb(223 215 211 / 0.9);
+}
+
+.fill-primary\/95 {
+  fill: rgb(223 215 211 / 0.95);
+}
+
+.fill-secondary {
+  fill: #292d2d;
+}
+
+.fill-secondary\/0 {
+  fill: rgb(41 45 45 / 0);
+}
+
+.fill-secondary\/10 {
+  fill: rgb(41 45 45 / 0.1);
+}
+
+.fill-secondary\/100 {
+  fill: rgb(41 45 45 / 1);
+}
+
+.fill-secondary\/15 {
+  fill: rgb(41 45 45 / 0.15);
+}
+
+.fill-secondary\/20 {
+  fill: rgb(41 45 45 / 0.2);
+}
+
+.fill-secondary\/25 {
+  fill: rgb(41 45 45 / 0.25);
+}
+
+.fill-secondary\/30 {
+  fill: rgb(41 45 45 / 0.3);
+}
+
+.fill-secondary\/35 {
+  fill: rgb(41 45 45 / 0.35);
+}
+
+.fill-secondary\/40 {
+  fill: rgb(41 45 45 / 0.4);
+}
+
+.fill-secondary\/45 {
+  fill: rgb(41 45 45 / 0.45);
+}
+
+.fill-secondary\/5 {
+  fill: rgb(41 45 45 / 0.05);
+}
+
+.fill-secondary\/50 {
+  fill: rgb(41 45 45 / 0.5);
+}
+
+.fill-secondary\/55 {
+  fill: rgb(41 45 45 / 0.55);
+}
+
+.fill-secondary\/60 {
+  fill: rgb(41 45 45 / 0.6);
+}
+
+.fill-secondary\/65 {
+  fill: rgb(41 45 45 / 0.65);
+}
+
+.fill-secondary\/70 {
+  fill: rgb(41 45 45 / 0.7);
+}
+
+.fill-secondary\/75 {
+  fill: rgb(41 45 45 / 0.75);
+}
+
+.fill-secondary\/80 {
+  fill: rgb(41 45 45 / 0.8);
+}
+
+.fill-secondary\/85 {
+  fill: rgb(41 45 45 / 0.85);
+}
+
+.fill-secondary\/90 {
+  fill: rgb(41 45 45 / 0.9);
+}
+
+.fill-secondary\/95 {
+  fill: rgb(41 45 45 / 0.95);
+}
+
 .object-cover {
   object-fit: cover;
 }
 
-.p-\[50px\] {
-  padding: 50px;
-}
-
 .p-\[30px\] {
   padding: 30px;
+}
+
+.p-\[50px\] {
+  padding: 50px;
 }
 
 .px-4 {
@@ -9330,6 +9966,10 @@ h3 {
   mix-blend-mode: color-burn;
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -9354,6 +9994,10 @@ h3 {
   forced-color-adjust: none;
 }
 
+:root {
+  --color-primary: #dfd7d3;
+}
+
 html {
   font-size: 16px;
 }
@@ -9376,9 +10020,21 @@ code {
   color: var(--color-primary)
 }
 
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:brightness-90:hover {
   --tw-brightness: brightness(.9);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.active\:scale-95:active {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .active\:brightness-75:active {

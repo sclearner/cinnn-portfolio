@@ -16,6 +16,10 @@
   }
 }
 
+:root {
+  --color-primary: #dfd7d3;
+}
+
 html {
   font-size: 16px;
 }

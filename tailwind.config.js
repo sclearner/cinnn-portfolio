@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [],
   safelist: [{
-    pattern: /(bg|text|color|border)-.*/
+    pattern: /(bg|text|color|border|fill)-.*/
   }]
 }
 
