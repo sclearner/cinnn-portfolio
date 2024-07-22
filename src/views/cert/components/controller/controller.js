@@ -14,17 +14,15 @@ export function AchievementController() {
   const [index, setIndex] = React.useState(null);
   const [certs, setCerts] = React.useState([]);
   const [height, setHeight] = React.useState(null);
-  const previousIndex = React.useRef(0);
   const scroller = React.useRef();
+  const interval = React.useRef();
 
   function previous() {
-    previousIndex.current = index;
-    setIndex((index - 1 + certs.length) % certs.length);
+    setIndex(i => (i - 1 + certs.length) % certs.length);
   }
 
   function next() {
-    previousIndex.current = index;
-    setIndex((index + 1) % certs.length);
+    setIndex(i => (i + 1) % certs.length);
   }
 
   React.useLayoutEffect(() => {
@@ -39,20 +37,38 @@ export function AchievementController() {
   }, []);
 
   React.useLayoutEffect(() => {
-   
-      const previousEle = scroller.current.children[previousIndex.current];
       const nextEle = scroller.current.children[index];
       scroller.current.scrollBy({
         top: 0,
-        left: getElementLeft(nextEle) - getElementLeft(previousEle),
+        left: getElementLeft(nextEle) - getElementLeft(scroller.current),
         behavior: "smooth",
       });
-      previousIndex.current = index;
       const newHeight = nextEle?.getBoundingClientRect().height;
       if (newHeight > 0) setHeight(newHeight);
-      console.log(newHeight);
-
   }, [index]);
+
+  React.useEffect(() => {
+    if (certs?.length == 0) return;
+    function onMouseScroll(e) {
+      e.preventDefault();
+      
+      if (e.deltaY > 0) {
+        next();
+      }
+      else if (e.deltaY < 0) {
+        previous();
+      }
+    }
+    interval.current ??= setInterval(
+      next, 5000
+    )
+    scroller.current.addEventListener('wheel', onMouseScroll, false);
+
+    return () => {
+      scroller.current.removeEventListener('wheel', onMouseScroll);
+      () => interval.current = clearInterval(interval)
+    }
+  }, [certs]);
 
   return (
     <>
@@ -94,7 +110,8 @@ export function AchievementController() {
               key={i}
               className={clsx(
                 "rounded-full w-2 h-2",
-                i === index ? "bg-primary" : "border-primary border-2"
+                i === index ? "bg-primary" : "border-primary border-2",
+                "cursor-pointer"
               )}
               onClick={() => setIndex(i)}
             />

@@ -1281,6 +1281,10 @@ input[type]:not([type="checkbox"]),
   border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-context-menu {
   cursor: context-menu;
 }
@@ -1395,6 +1399,10 @@ input[type]:not([type="checkbox"]),
 
 .overflow-x-scroll {
   overflow-x: scroll;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
 }
 
 .text-ellipsis {
