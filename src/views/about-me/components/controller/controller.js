@@ -1,6 +1,8 @@
 import React from "react";
-import { SkillsList } from "../skills/skills";
+import { SkillsList } from "../skills";
 import { MaterialButton } from "~/views/components/button";
+import { AcademicInfo } from "../academic";
+import { CertificateList } from "../certificates";
 
 export function AboutController() {
     const featureList = [
@@ -10,11 +12,11 @@ export function AboutController() {
         },
         {
             name: "Học vấn",
-            content: "Học vấn"
+            content: <AcademicInfo />
         },
         {
             name: "Chứng nhận",
-            content: "<SkillsList />"
+            content: <CertificateList />
         },
     ]
 
