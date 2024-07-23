@@ -8,7 +8,7 @@ export function IntroSubsection() {
             <h1 className="max-lg:text-5xl">Tôi là</h1>
             <h1 className="max-lg:text-5xl text-primary">Lưu Thị Ngọc Quỳnh</h1>
             <h1 className="max-lg:text-5xl">Data Analyst</h1>
-            <p className="text-base lg:text-2xl">Quote nào hay hay ở đây</p>
+            <p className="text-base lg:text-2xl">Khi bạn muốn hành động, động lực chính là mục tiêu còn thái độ quyết định bạn làm điều đó tốt như thế nào.</p>
             <HRButtonBar />
         </div>
     )
