@@ -21,14 +21,9 @@ module.exports = {
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(pdf|png|jpe?g|bmp|webp|gif|ico|json)$/i,
+                test: /\.(pdf|png|jpe?g|bmp|webp|gif|svg|ico|json)$/i,
                 include: path.join(__dirname, 'public'),
                 use: ['file-loader'],
-            },
-            {
-                test: /\.svg$/,
-                include: path.join(__dirname, 'public'),
-                use: ['svg-inline-loader']
             }
         ]
     },
