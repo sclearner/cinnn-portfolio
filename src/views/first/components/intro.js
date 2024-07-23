@@ -1,6 +1,8 @@
 import React from "react";
 import { MaterialButton } from "@v/components/button";
 
+import download from "@p/icons/download.svg";
+
 export function IntroSubsection() {
     return (
         <div className="max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:text-center">
@@ -34,7 +36,7 @@ function HRButtonBar() {
             <MaterialButton className="max-lg:w-full" mode="secondary" onClick={downloadCV}>
                 <div className="flex gap-4 justify-center">
                     Tải CV xuống
-                    <img src="/icons/download.svg" />
+                    <img src={download} />
                 </div>
             </MaterialButton>
         </div>

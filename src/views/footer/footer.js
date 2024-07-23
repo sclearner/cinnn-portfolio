@@ -3,12 +3,14 @@ import { faFacebookF, faLinkedinIn, faXTwitter } from "@fortawesome/free-brands-
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import icon from "@p/icons/icon.svg"
+
 export function Footer() {
   return (
     <footer className="bg-primary flex flex-col md:flex-row p-[10px] lg:px-[100px] justify-between gap-4 lg:gap-[45px] items-center">
       <div className="flex max-lg:flex-col max-lg:items-center lg:gap-[30px] gap-2">
         <div className="flex gap-[6px] items-center">
-          <img src="/icons/icon.svg" />
+          <img src={icon} />
           <b>LTNQ</b>
         </div>
         <div className="text-sm max-lg:text-center">

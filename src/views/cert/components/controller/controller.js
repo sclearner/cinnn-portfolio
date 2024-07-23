@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import React from "react";
 import { MaterialButton } from "~/views/components/button";
-
+import left from "@p/icons/left.svg";
+import right from "@p/icons/right.svg";
 const certsImport = import.meta.webpackContext("/public/certs", {
   recursive: true,
 });
@@ -85,7 +86,7 @@ export function AchievementController() {
           padding="p-auto"
           onClick={previous}
         >
-          <img className="w-5" src="\icons\left.svg" />
+          <img className="w-5" src={left} />
         </MaterialButton>
         <div
           className={clsx(
@@ -111,7 +112,7 @@ export function AchievementController() {
           padding="p-auto"
           onClick={next}
         >
-          <img className="w-5" src="\icons\right.svg" />
+          <img className="w-5" src={right} />
         </MaterialButton>
       </div>
       <div className="flex gap-1">

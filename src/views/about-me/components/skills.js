@@ -1,22 +1,27 @@
 import React from "react";
 
+import digitalMarketing from "@p/images/digital-marketing.png";
+import brand from "@p/images/brand.png";
+import copyWriting from "@p/images/copywriting.png";
+import seo from "@p/images/seo.png";
+
 export function SkillsList() {
     const skills = [
         {
             name: 'Digital Markerting',
-            image: 'images/digital-marketing.png',
+            image: digitalMarketing,
         },
         {
             name: 'Branding',
-            image: '/images/brand.png',
+            image: brand,
         },
         {
             name: 'Copywriting',
-            image: '/images/copywriting.png',
+            image: copyWriting,
         },
         {
             name: 'Search Engine Optimization',
-            image: '/images/seo.png',
+            image: seo,
         }
     ];
 
