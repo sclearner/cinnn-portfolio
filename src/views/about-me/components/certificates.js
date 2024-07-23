@@ -13,7 +13,7 @@ export function CertificateList() {
   return (
     <ul>
       {certs.map((e) => (
-        <li className="flex gap-1" key={e}>
+        <li className="flex gap-1 text-start" key={e}>
           <FontAwesomeIcon className="flex jusitfy-self-center" icon={faCertificate} color="var(--color-primary)"/>
           <p>{e}</p>
         </li>

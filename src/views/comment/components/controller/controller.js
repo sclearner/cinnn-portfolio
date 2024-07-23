@@ -60,7 +60,7 @@ export function CommentController() {
     <>
       <div className="flex justify-center gap-6 items-center">
         <MaterialButton
-          className="flex justify-center items-center aspect-square min-w-[50px] grow"
+          className="flex justify-center items-center aspect-square max-w-[50px] grow"
           padding="p-auto"
           onClick={previous}
           isTonal
@@ -68,7 +68,7 @@ export function CommentController() {
           <FontAwesomeIcon icon={faArrowLeft} color="var(--color-primary)" />
         </MaterialButton>
         <MaterialButton
-          className="flex justify-center items-center aspect-square min-w-[50px] grow"
+          className="flex justify-center items-center aspect-square max-w-[50px] grow"
           padding="p-auto"
           onClick={next}
         >

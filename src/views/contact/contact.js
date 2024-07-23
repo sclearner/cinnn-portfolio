@@ -13,7 +13,7 @@ export function ContactSection() {
 
   return (
     <div id="contact" className="bg-primary">
-      <section className="flex flex-col px-[100px] p-[50px] justify-right gap-[45px] items-center">
+      <section className="flex flex-col max-lg:gap-4 px-[10px] py-[25px] lg:px-[100px] lg:py-[50px] justify-right gap-[45px] items-center">
         <ContactTitle />
         <div className="flex justify-center gap-[30px] w-full flex-wrap">
           <ContactCard ref={card}/>

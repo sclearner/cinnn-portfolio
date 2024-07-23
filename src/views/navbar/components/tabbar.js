@@ -1,7 +1,7 @@
 import React from 'react';
 
 export function Tabbar() {
-    return (<div className='grow flex gap-10 justify-end items-center xl:px-7 md:px-4'>
+    return (<div className='grow flex gap-4 sm:gap-10 justify-end items-center xl:px-7 md:px-4'>
         <Tab href="#first">Trang chủ</Tab>
         <Tab href="#about">Về tôi</Tab>
         <Tab href="#achievement">Thành tựu</Tab>

@@ -32,13 +32,13 @@ export function CompanyList() {
   ];
 
   return (
-    <div className="flex gap-6 flex-wrap justify-evenly">
+    <div className="flex gap-6 max-sm:flex-4 flex-wrap justify-evenly max-sm:flex-col max-sm:items-stretch">
       {companies.map((e) => (
         <div
           key={e.name}
-          className="flex flex-col items-center justify-center bg-[#fff] p-[30px] rounded-[15px]"
+          className="max-sm:w-full flex flex-col items-center justify-center bg-[#fff] p-[30px] rounded-[15px]"
         >
-          <h2 className="text-center font-bold">{`${e.from}-${
+          <h2 className="text-center font-bold max-md:text-4xl">{`${e.from}-${
             e.to || "nay"
           }`}</h2>
           <p>
