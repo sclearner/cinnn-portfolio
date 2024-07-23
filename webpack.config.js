@@ -5,7 +5,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'bundle.js'
+        filename: '[name].[contenthash].js',
+        clean: true
     },
     module: {
         rules: [
@@ -16,15 +17,17 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                include: path.join(__dirname, 'src'),
                 use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(pdf|png|jpe?g|bmp|webp|gif|ico|json)$/i,
-                exclude: /node_modules/,
+                include: path.join(__dirname, 'public'),
                 use: ['file-loader'],
             },
             {
                 test: /\.svg$/,
+                include: path.join(__dirname, 'public'),
                 use: ['svg-inline-loader']
             }
         ]
@@ -44,5 +47,20 @@ module.exports = {
             filename: './index.html',
             favicon: './public/images/avatar-nobg.png'
         })
-    ]
+    ],
+    optimization: {
+        moduleIds: 'determinisitic',
+        removeAvailableModules: false,
+        removeEmptyChunks: false,
+        splitChunks: {
+            cacheGroups: {
+                vendor: {
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        },
+        runtimeChunk: 'single'
+      },
 }
