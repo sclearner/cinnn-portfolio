@@ -49,7 +49,6 @@ module.exports = {
         })
     ],
     optimization: {
-        moduleIds: 'determinisitic',
         removeAvailableModules: false,
         removeEmptyChunks: false,
         splitChunks: {
