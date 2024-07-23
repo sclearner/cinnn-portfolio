@@ -76,7 +76,7 @@ export function ProjectList() {
 
 function FilterBar({ tags, index, setIndex }) {
   return (
-    <div className="flex gap-4 justify-center">
+    <div className="flex flex-wrap gap-4 justify-center">
       {tags.map((e, i) => (
         <MaterialButton
           key={i}
@@ -94,12 +94,12 @@ function FilterBar({ tags, index, setIndex }) {
 
 function ProjectContentList({tag, projectList}) {
   return (
-    <div className="grid grid-cols-3 gap-8">
+    <div className="flex flex-col lg:grid lg:grid-cols-3 gap-4 lg:gap-8">
       {projectList
         .filter((e) => tag == "Tất cả" || e.tag === tag)
         .map((e) => (
           <a key={e.name} href={e.link} target="_blank">
-            <img className="rounded-[20px] aspect-video object-cover hover:scale-110 active:scale-95 cursor-pointer" src={e.image} alt={e.name} />
+            <img className="rounded-[20px] aspect-video object-cover lg:hover:scale-110 active:scale-95 cursor-pointer" src={e.image} alt={e.name} />
           </a>
         ))}
     </div>

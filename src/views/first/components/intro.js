@@ -3,12 +3,12 @@ import { MaterialButton } from "@v/components/button";
 
 export function IntroSubsection() {
     return (
-        <div>
+        <div className="max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:text-center">
             <h3>Chào mừng đến với portfolio của tôi</h3>
-            <h1>Tôi là</h1>
-            <h1 className="text-primary">Lưu Thị Ngọc Quỳnh</h1>
-            <h1>Data Analyst</h1>
-            <p className="text-2xl">Quote nào hay hay ở đây</p>
+            <h1 className="max-lg:text-5xl">Tôi là</h1>
+            <h1 className="max-lg:text-5xl text-primary">Lưu Thị Ngọc Quỳnh</h1>
+            <h1 className="max-lg:text-5xl">Data Analyst</h1>
+            <p className="text-base lg:text-2xl">Quote nào hay hay ở đây</p>
             <HRButtonBar />
         </div>
     )
@@ -29,10 +29,10 @@ function HRButtonBar() {
     }
 
     return (
-        <div className="flex gap-11 mt-12">
-            <MaterialButton>Tuyển ngay!</MaterialButton>
-            <MaterialButton mode="secondary" onClick={downloadCV}>
-                <div className="flex gap-4">
+        <div className="flex max-lg:flex-col gap-4 lg:gap-11 mt-4 lg:mt-12 max-lg:items-stretch">
+            <MaterialButton className="max-lg:w-full">Tuyển ngay!</MaterialButton>
+            <MaterialButton className="max-lg:w-full" mode="secondary" onClick={downloadCV}>
+                <div className="flex gap-4 justify-center">
                     Tải CV xuống
                     <img src="/icons/download.svg" />
                 </div>

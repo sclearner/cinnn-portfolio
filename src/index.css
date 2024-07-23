@@ -20,11 +20,9 @@
     @apply p-[15px] text-shadow rounded-[5px];
     resize: none;
   }
-
 }
 
 @layer utilities {
-
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
     display: none;

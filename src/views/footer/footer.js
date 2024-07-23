@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function Footer() {
   return (
-    <footer className="bg-primary flex flex-row md:px-[100px] justify-between gap-[45px] items-center">
-      <div className="flex gap-[30px]">
+    <footer className="bg-primary flex flex-col md:flex-row p-[10px] lg:px-[100px] justify-between gap-4 lg:gap-[45px] items-center">
+      <div className="flex max-lg:flex-col max-lg:items-center lg:gap-[30px] gap-2">
         <div className="flex gap-[6px] items-center">
           <img src="/icons/icon.svg" />
           <b>LTNQ</b>
         </div>
-        <div className="text-sm">
+        <div className="text-sm max-lg:text-center">
           <p>© Copyright 2024. All Rights Reserved.</p>
           <p>Template bởi AeroVision</p>
         </div>

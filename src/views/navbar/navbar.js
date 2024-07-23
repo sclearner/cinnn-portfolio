@@ -1,7 +1,7 @@
 import React from "react";
+import { ContactButton } from "./components/contact-button";
 import { HomeButton } from "./components/home-button";
 import { Tabbar } from "./components/tabbar";
-import { ContactButton } from "./components/contact-button";
 
 export function Navbar() {
   const navbar = React.useRef();
@@ -18,7 +18,7 @@ export function Navbar() {
     }
   }, []);
   
-  return (<nav ref={navbar} className="sticky w-full top-[-1px] bg-background flex py-2 sm: px-2 xl:px-20 z-50 duration-500">
+  return (<nav ref={navbar} className="grid grid-cols-2 sm:flex flex-wrap sticky w-full top-[-1px] bg-background py-2 px-2 xl:px-20 z-50 duration-500">
     <HomeButton />
     <Tabbar />
     <ContactButton />

@@ -5,7 +5,7 @@ function _ContactForm({card}, _ref) {
   return (
     <form className="flex flex-col gap-[15px] grow">
       <div className="flex flex-col gap-[15px]" style={{minHeight: `${card.current.offsetHeight}px`}}> 
-      <div className="flex gap-[15px]">
+      <div className="flex max-lg:flex-col gap-[15px]">
         <input className="grow" type="text" placeholder="Tên*" name="name" />
         <input className="grow" type="email" placeholder="Địa chỉ email*" name="email"/>
       </div>
@@ -18,7 +18,7 @@ function _ContactForm({card}, _ref) {
           Bạn đồng ý với <a className="p-0 m-0">Điều khoản & Chính sách</a>
         </p>
       </div>
-      <MaterialButton className="w-fit" mode="secondary">Yêu cầu ngay</MaterialButton>
+      <MaterialButton className="w-auto lg:w-fit" mode="secondary">Yêu cầu ngay</MaterialButton>
     </form>
   );
 }

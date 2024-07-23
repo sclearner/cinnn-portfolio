@@ -8,7 +8,7 @@ export function ContactButton() {
 
   return (
     <MaterialButton
-      className="block max-md:w-0 max-md:p-0 overflow-hidden md:w-auto transition-all whitespace-nowrap"
+      className="block max-md:w-0 max-md:h-0 max-md:p-0 overflow-hidden md:w-auto transition-all whitespace-nowrap"
       mode="primary"
       onClick={handleClick}
     >

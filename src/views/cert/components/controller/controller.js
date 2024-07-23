@@ -18,11 +18,13 @@ export function AchievementController() {
   const interval = React.useRef();
 
   function previous() {
-    setIndex(i => (i - 1 + certs.length) % certs.length);
+    setIndex((i) => (i - 1 + certs.length) % certs.length);
+    resetInterval();
   }
 
   function next() {
-    setIndex(i => (i + 1) % certs.length);
+    setIndex((i) => (i + 1) % certs.length);
+    resetInterval();
   }
 
   React.useLayoutEffect(() => {
@@ -37,44 +39,49 @@ export function AchievementController() {
   }, []);
 
   React.useLayoutEffect(() => {
-      const nextEle = scroller.current.children[index];
-      scroller.current.scrollBy({
-        top: 0,
-        left: getElementLeft(nextEle) - getElementLeft(scroller.current),
-        behavior: "smooth",
-      });
-      const newHeight = nextEle?.getBoundingClientRect().height;
-      if (newHeight > 0) setHeight(newHeight);
+    const nextEle = scroller.current.children[index];
+    scroller.current.scrollBy({
+      top: 0,
+      left: getElementLeft(nextEle) - getElementLeft(scroller.current),
+      behavior: "smooth",
+    });
+    const newHeight = nextEle?.getBoundingClientRect().height;
+    if (newHeight > 0) setHeight(newHeight);
   }, [index]);
 
   React.useEffect(() => {
     if (certs?.length == 0) return;
     function onMouseScroll(e) {
+      if (window.innerWidth < 640) return;
+
       e.preventDefault();
-      
+
       if (e.deltaY > 0) {
         next();
-      }
-      else if (e.deltaY < 0) {
+      } else if (e.deltaY < 0) {
         previous();
       }
     }
-    interval.current ??= setInterval(
-      next, 5000
-    )
-    scroller.current.addEventListener('wheel', onMouseScroll, false);
+
+    interval.current ??= setInterval(next, 5000);
+    scroller.current.addEventListener("wheel", onMouseScroll, false);
 
     return () => {
-      scroller.current.removeEventListener('wheel', onMouseScroll);
-      () => interval.current = clearInterval(interval)
-    }
+      scroller.current.removeEventListener("wheel", onMouseScroll);
+      () => (interval.current = clearInterval(interval.current));
+    };
   }, [certs]);
+
+  function resetInterval() {
+    interval.current = clearInterval(interval.current);
+    interval.current ??= setInterval(next, 5000);
+  }
 
   return (
     <>
-      <div className="flex justify-center gap-6 items-center">
+      <div className="max-sm:relative flex justify-center gap-6 items-center">
         <MaterialButton
-          className="flex justify-center items-center aspect-square min-w-[50px] grow"
+          className="max-sm:bg-opacity-0 max-sm:h-full max-sm:z-50 max-sm:absolute max-sm:top-auto max-sm:left-1 flex justify-center items-center sm:aspect-square min-w-[50px] grow"
           padding="p-auto"
           onClick={previous}
         >
@@ -84,9 +91,13 @@ export function AchievementController() {
           className={clsx(
             "relative grow max-w-[600px] transition-all duration-1000 overflow-hidden"
           )}
-          style={height <= 0 ? {height: 'fit-content'} : {
-            height: `${height}px`,
-          }}
+          style={
+            height <= 0
+              ? { height: "fit-content" }
+              : {
+                  height: `${height}px`,
+                }
+          }
         >
           <div
             ref={scroller}
@@ -96,7 +107,7 @@ export function AchievementController() {
           </div>
         </div>
         <MaterialButton
-          className="flex justify-center items-center aspect-square min-w-[50px] grow"
+          className="max-sm:bg-opacity-0 max-sm:h-full max-sm:absolute max-sm:top-auto max-sm:right-1 flex justify-center items-center sm:aspect-square min-w-[50px] grow"
           padding="p-auto"
           onClick={next}
         >

@@ -3,7 +3,7 @@ import { AboutController } from "./controller/controller";
 
 export function AboutSubsection() {
   return (
-    <div>
+    <div className="max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:text-center">
       <p className="text-primary font-semibold">VỀ TÔI</p>
       <h2 className="text-primary font-bold">Niềm đam mê</h2>
       <h2 className="font-bold pb-4">với các lĩnh vực media</h2>

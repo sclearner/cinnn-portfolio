@@ -2,8 +2,8 @@ import React from "react";
 
 export function FirstAvatar() {
     return (
-        <div className="relative min-h-[500px] h-full min-w-[500px] aspect-square rounded-full overflow-hidden basis-[500px]">
-            <img className="absolute h-full w-full object-cover" src="/images/avatar.png" />
+        <div className="relative lg:min-h-[500px] max-lg:max-w-[350px] w-full lg:min-w-[500px] aspect-square rounded-full overflow-hidden basis-[350px] lg:basis-[500px]">
+            <img className="absolute h-full aspect-square object-cover" src="/images/avatar.png" />
         </div>
     )
 }
